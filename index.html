@@ -1,130 +1,81 @@
 <!DOCTYPE html>
 <html>
-  
 <head>
-  <title>Page Title</title>
+  <meta charset="UTF-8" />
+  <title>Workshop #HTML - FORM</title>
+  <h1>Workshop #HTML - FORM</h1>
 </head>
 <body>
-  <h1>This is a Heading</h1>
-  <p>This is a paragraph.
-    <table>
-      <tr>
-      <th>Company</th>
-      <th>Contact</th>
-      <th>Country</th>
-      </tr>
-      <tr>
-      <td>Alfreds Futterkiste</td>
-      <td>Maria Anders</td>
-      <td>Germany</td>
-      </tr>
-      </table>
-      
-      <table>
-      <tr>
-      <th></th>
-      <th scope="col">Saturday</th>
-      <th scope="col">Sunday</th>
-      </tr>
-      <tr>
-      <th scope="row">Tickets sold:</th>
-      <td>120</td>
-      <td>135</td>
-      </tr>
-      <tr>
-      <th scope="row">Total sales:</th>
-      <td>$775</td>
-      <td>$675</td>
-      </tr>
-      </table>
-      
-      <table>
-      <tr>
-      <th></th>
-      <th>9am</th>
-      <th>10am</th>
-      <th>11am</th>
-      <th>12am</th>
-      </tr>
-      <tr>
-      <th>Monday</th>
-      <td colspan="2">Geography</td>
-      <td>Math</td>
-      <td>Art</td>
-      </tr>
-      </table>
-      
-      <table>
-      <tr>
-      <th></th>
-      <th>ABC</th>
-      <th>BBC</th>
-      <th>CNN</th>
-      </tr>
-      <tr>
-      <th>6pm - 7pm</th>
-      <td rowspan="2">Movie</td>
-      <td>Comedy</td>
-      <td>News</td>
-      </tr>
-      <tr>
-      <th>7pm - 8pm</th>
-      <td>Sport</td>
-      <td>Current Affairs</td>
-      </tr>
-      </table>
-      
-      <table>
-      <thead>
-      <tr>
-      <th>Date</th>
-      <th>Income</th>
-      <th>Expenditure</th>
-      </tr>
-      </thead>
     <form>
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname"><br>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname">
-      </form>
-      <tbody>
+      <table>
         <tr>
-        <th>1st January</th>
-        <td>250</td>
-        <td>36</td>
-        </tr>
-        <tr>
-        <th>2nd January</th>
-        <td>285</td>
-        <td>48</td>
-        </tr>
-        <!-- additional rows as above -->
-        <tr>
-        <th>31st January</th>
-        <td>129</td>
-        <td>64</td>
-        </tr>
-        </tbody>
-        
-        <tfoot>
-        <tr>
-        <td></td>
-        <td>7824</td>
-        <td>1241</td>
-        </tr>
-        </tfoot>
-        </table>
-        <form>
-          <input type="radio" id="html" name="fav_language" value="HTML">
-          <label for="html">HTML</label><br>
-          <input type="radio" id="css" name="fav_language" value="CSS">
-          <label for="css">CSS</label><br>
-          <input type="radio" id="javascript" name="fav_language"
-          value="JavaScript">
-          <label for="javascript">JavaScript</label>
-          </form>
-  </p>
+      <td><label for="fname">ชื่อ </label></td>
+      <td><input type="text" id="fname" name="fname"></td>
+    </tr>
+    <tr>
+      <td><label for="lname">สกุล </label></td>
+      <td><input type="text" id="lname" name="lname"></td><br>
+    </tr>
+    <tr>
+      <td><label for="BD">เดือน/วัน/ปีเกิด</label></td>
+      <td><input type="date" id="BD" name="BD"><br></td>
+   </tr>
+   <tr>  
+      <td><label for="age">อายุ  </label></td>
+      <td><input type="number" id="age" name="age"><br></td>
+   </tr>
+   <tr>
+    <td><label for="age">เพศ</label></td>
+    <td><input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">ชาย</label>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">หญิง</label><br></td>
+  </tr>
+  <tr>
+    <td><label for="myfile">รูป</label></td>
+    <td><input type="file" id="myfile" name="myfile"></td>
+  </tr>
+  <tr>
+    <td><label for="textarea">ที่อยู่</label></td>
+    <td><textarea rows="4" cols="40"></textarea></td>
+  </tr>
+  <tr>
+    <td><label for="favColor">สีที่ชอบ</label></td>
+    <td>
+      <select name="favColor" id="favColor-names">     
+          <option value="สีแดง">สีแดง</option>
+          <option value="สีแดง">สีแดง</option>
+          <option value="สีแดง">สีแดง</option>
+          <option value="สีแดง">สีแดง</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td><label for="age">เพลงที่ชอบ</label></td>
+    <td><input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">เพื่อชีวิต</label>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">ลูกทุ่ง</label>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">และอื่นๆ</label><br></td>
+  </tr>
+  <tr>
+    <td><label for="textarea"></label><br></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> 
+    <label for="vehicle1"> ยินยอมให้เก็บข้อมูล</label><br></td>
+  </tr>
+  <tr>
+    <td><label for="textarea"></label><br></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Submit"></td>
+    <td><input type="reset" value="Reset"><br></td>
+  </tr>
+  
+    </table>
+    </form>
+      
 </body>
 
 </html>
