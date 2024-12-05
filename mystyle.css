@@ -1,0 +1,13 @@
+p{
+  font-family: 'Oswald';
+  color:gold;
+}
+body{
+  background-color: rgb(31, 31, 31);
+  font-family: 'Kanit';
+  color: darkviolet;
+  font-weight: bold;
+}
+a:hover{
+  background-color: hotpink;
+}
