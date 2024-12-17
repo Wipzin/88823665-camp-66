@@ -1,6 +1,8 @@
 p{
   font-family: 'Oswald';
   color:gold;
+  position: static;
+    border: 3px solid #73AD21;
 }
 body{
   background-color: rgb(31, 31, 31);
@@ -11,3 +13,7 @@ body{
 a:hover{
   background-color: hotpink;
 }
+  div.static {
+    position: static;
+    border: 3px solid #73AD21;
+    }
