@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="mystyle.css">
+  <meta charset="UTF-8" />
+  <title>Workshop #HTML - FORM</title>
+  <h1><p>Workshop #HTML - FORM</p></h1>
+</head>
+<body>
+    <form>
+      <table>
+        <tr>
+      <td><label for="fname">ชื่อ </label></td>
+      <td><a><input type="text" id="fname" name="fname"></a></td>
+    </tr>
+    <tr>
+      <td><label for="lname">สกุล </label></td>
+      <td><a><input type="text" id="lname" name="lname"></a></td><br>
+    </tr>
+    <tr>
+      <td><label for="BD">เดือน/วัน/ปีเกิด</label></td>
+      <td><a><input type="date" id="BD" name="BD"></a><br></td>
+   </tr>
+   <tr>  
+      <td><label for="age">อายุ  </label></td>
+      <td><a><input type="number" id="age" name="age"></a><br></td>
+   </tr>
+   <tr>
+    <td><label for="age">เพศ</label></td>
+    <td><input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">ชาย</label>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">หญิง</label><br></td>
+  </tr>
+  <tr>
+    <td><label for="myfile">รูป</label></td>
+    <td><input type="file" id="myfile" name="myfile"></td>
+  </tr>
+  <tr>
+    <td><label for="textarea">ที่อยู่</label></td>
+    <td><a><textarea rows="4" cols="40"></textarea></a></td>
+  </tr>
+  <tr>
+    <td><label for="favColor">สีที่ชอบ</label></td>
+    <td>
+      <select name="favColor" id="favColor-names">     
+          <option value="สีแดง">สีแดง</option>
+          <option value="สีแดง">สีแดง</option>
+          <option value="สีแดง">สีแดง</option>
+          <option value="สีแดง">สีแดง</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td><label for="age">เพลงที่ชอบ</label></td>
+    <td><input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">เพื่อชีวิต</label>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">ลูกทุ่ง</label>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">และอื่นๆ</label><br></td>
+  </tr>
+  <tr>
+    <td><label for="textarea"></label><br></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> 
+    <label for="vehicle1"> ยินยอมให้เก็บข้อมูล</label><br></td>
+  </tr>
+  <tr>
+    <td><label for="textarea"></label><br></td>
+  </tr>
+  <tr>
+    <td><button id="Submit" onclick="this.style.background = 'green' ">Submit</button></td>
+    <td><button id="Reset" onclick="this.style.background = 'red' ">Reset</button><br></td>
+  </tr>
+  
+    </table>
+    </form>
+      
+</body>
+
+</html>
