@@ -6,9 +6,9 @@
   @csrf
   <input type = "test" name = "myinput">
   <button type ="submit">
-    submit
+    Submit
   </button>
 </form>
-<?php for($i=0;$i<10;$i++){?>
+<?php for($i=0;$i<12;$i++){?>
   <h1>{{$i}}</h1>
 <?php } ?>
