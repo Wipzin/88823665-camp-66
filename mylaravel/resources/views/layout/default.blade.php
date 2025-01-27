@@ -42,16 +42,14 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-
-
-    <link rel="stylesheet" href="{{url('css/adminlte.css')}}" />
+    <link rel="stylesheet" href="{{ url('public/css/adminlte.css') }}" />
     <!--end::Required Plugin(AdminLTE)-->
     @yield('style')
   </head>
   <!--end::Head-->
   <!--begin::Body-->
   <body class="bg-body-secondary">
-   @yield('content')
+    @yield('content')
     <!-- /.login-box -->
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <script
@@ -72,7 +70,7 @@
       crossorigin="anonymous"
     ></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="{{url('js/adminlte.js')}}"></script>
+    <script src="{{url('public/js/adminlte.js')}}"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';

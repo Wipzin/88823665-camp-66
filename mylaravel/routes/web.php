@@ -8,13 +8,11 @@ Route::get("/login" ,
 Route::get("/register" ,
     [RegisterController::class,'index']);
 Route::get("/home" ,
-    [HomeController::class,'index']);
+    [App\Http\Controllers\HomeController::class,'index']);
 Route::get("/" ,
-    [HomeController::class,'index']);
-    
-Route::get('/', function () {
-    return view('layout.default');
-});
+    [App\Http\Controllers\HomeController::class,'index']);
+
+
 Route::get('/hello/{id?}',
     function ($val="") {
     return "<h1>Hello World!$val</h1>";
