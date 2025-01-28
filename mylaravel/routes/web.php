@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 
 Route::get("/login" ,
-    [LoginController::class,'index']);
+    [App\Http\Controllers\LoginController::class,'index']);
 Route::get("/register" ,
-    [RegisterController::class,'index']);
+    [App\Http\Controllers\RegisterController::class,'index']);
 Route::get("/home" ,
     [App\Http\Controllers\HomeController::class,'index']);
 Route::get("/" ,
