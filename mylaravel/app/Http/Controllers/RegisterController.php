@@ -10,4 +10,21 @@ class RegisterController extends Controller
     function index(){
         return view('register');
     }
+
+    function create (Request $req){
+        // $obj_user = new Users;
+        // $obj_user->name = $req->input('name');
+        // $obj_user->email = $req->email;
+        // $obj_user->password = $req ->password;
+        // $obj_user-> save();
+
+        user::create([
+            'name' => $req->name,
+            'email' =>$req->email,
+            'password' =>$req->password
+        ]);
+
+        print_r($req->input());
+    }
+
 }
