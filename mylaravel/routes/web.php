@@ -14,13 +14,13 @@ Route::get("/home" ,
 Route::get("/" ,
     [App\Http\Controllers\HomeController::class,'index']);
 Route::get("/users" ,
-    [App\Http\Controllers\HomeController::class,'index']);
+    [App\Http\Controllers\UserController::class,'index']);
 Route::get("/users/{id}" ,
-    [App\Http\Controllers\HomeController::class,'edit']);
+    [App\Http\Controllers\UserController::class,'edit']);
 Route::put("/user" ,
-    [App\Http\Controllers\HomeController::class,'edit_action']);
+    [App\Http\Controllers\UserController::class,'edit_action']);
 Route::delete("/user" ,
-    [App\Http\Controllers\HomeController::class,'delete']);
+    [App\Http\Controllers\UserController::class,'delete']);
 
 
 Route::get('/hello/{id?}',

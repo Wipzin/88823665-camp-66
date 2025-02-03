@@ -1,4 +1,4 @@
-@extends('layout.default')
+@extends('layout.default_with_menu')
 
 @section('content')
 <div class="home-page">
