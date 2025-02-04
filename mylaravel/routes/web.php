@@ -1,33 +1,36 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MyController;
-
-Route::get("/login" ,
-    [App\Http\Controllers\LoginController::class,'index']);
-Route::get("/register" ,
-    [App\Http\Controllers\RegisterController::class,'index']);
-Route::post("/register" ,
-    [App\Http\Controllers\RegisterController::class,'create']);
-Route::get("/home" ,
-    [App\Http\Controllers\HomeController::class,'index']);
-Route::get("/" ,
-    [App\Http\Controllers\HomeController::class,'index']);
-Route::get("/users" ,
-    [App\Http\Controllers\UserController::class,'index']);
-Route::get("/users/{id}" ,
-    [App\Http\Controllers\UserController::class,'edit']);
-Route::put("/user" ,
-    [App\Http\Controllers\UserController::class,'edit_action']);
-Route::delete("/user" ,
-    [App\Http\Controllers\UserController::class,'delete']);
+use App\Http\Controllers\Mycontroller;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 
 
-Route::get('/hello/{id?}',
-    function ($val="") {
-    return "<h1>Hello World!$val</h1>";
+Route::get('/', function () {
+    return view('welcome');
 });
-Route::get("/mycontroller/{id?}" ,
-    [MyController::class,'myfunction']);
-Route::post("/mycontroller/{id?}" ,
-    [MyController::class,'MYFUNCTION']);
+Route::get('/hello', function () {
+    return "<h1>Hello world</h1>";
+});
+Route::get("/mycontroller/{id?}",
+[Mycontroller::class,'myfunction']);
+
+Route::post('/mycontroller/{id?}',
+[Mycontroller::class,'myfunction']);
+
+Route ::get('/',function(){
+    return view('layouts.default');
+});
+
+Route ::get('/home',function(){
+    return view('home');
+});
+
+Route ::get('/login',[LoginController::class,'index']);
+Route ::get('/register',[RegisterController::class,'register']);
+Route ::post('/register',[RegisterController::class,'create']);
+Route ::get('/user',[UserController::class,'index']);
+Route ::get('/user/{id}',[UserController::class,'edit']);
+Route ::put ('/user',[UserController::class,'saveEdit']);
+Route ::delete ('/user',[UserController::class,'delete']);

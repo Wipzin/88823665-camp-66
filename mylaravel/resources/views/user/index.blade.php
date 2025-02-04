@@ -1,4 +1,4 @@
-@extends('layout.default_with_menu')
+@extends('layout.default')
 @section('content')
     <div class="row">
         <div class="col-md-12">
