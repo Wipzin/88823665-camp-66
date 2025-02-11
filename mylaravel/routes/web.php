@@ -27,10 +27,24 @@ Route ::get('/home',function(){
     return view('home');
 });
 
-Route ::get('/login',[LoginController::class,'index']);
-Route ::get('/register',[RegisterController::class,'register']);
-Route ::post('/register',[RegisterController::class,'create']);
-Route ::get('/user',[UserController::class,'index']);
-Route ::get('/user/{id}',[UserController::class,'edit']);
-Route ::put ('/user',[UserController::class,'saveEdit']);
-Route ::delete ('/user',[UserController::class,'delete']);
+Route ::get('/login',
+[LoginController::class,'index']);
+
+Route::get('/register',
+ [RegisterController::class, 'index']);
+
+
+Route ::post('/register',
+[RegisterController::class,'create']);
+
+Route ::get('/user',
+[UserController::class,'index']);
+
+Route ::get('/user/{id}',
+[UserController::class,'edit']);
+
+Route ::put ('/user',
+[UserController::class,'saveEdit']);
+
+Route::delete('/user/{id}',
+[UserController::class, 'delete'])->name('user.destroy');
