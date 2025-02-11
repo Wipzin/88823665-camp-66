@@ -20,7 +20,7 @@ Route::post('/mycontroller/{id?}',
 [Mycontroller::class,'myfunction']);
 
 Route ::get('/',function(){
-    return view('layouts.default');
+    return view('layout.default');
 });
 
 Route ::get('/home',function(){
