@@ -7,7 +7,7 @@ use App\Models\User;
 
 class RegisterController extends Controller
 {
-    function register(){
+    function index(){
         return view('register');
     }
     function create(Request $req){

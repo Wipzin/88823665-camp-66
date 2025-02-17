@@ -5,8 +5,11 @@ use App\Http\Controllers\Mycontroller;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
-
-
+use App\Http\Controllers\ProductController;
+use App\Http\Middleware\CheckLogin;
+use App\Http\Controllers\HomeController;
+// Route::get('/product',
+// [Pro])
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,12 +30,20 @@ Route ::get('/home',function(){
     return view('home');
 });
 
+// Route ::get('/home',
+// [HomeController::class,'index']);
+
+Route ::get('/',
+[HomeController::class,'index'])->middleware([CheckLogin::class,]);
+
 Route ::get('/login',
 [LoginController::class,'index']);
 
-Route::get('/register',
- [RegisterController::class, 'index']);
+Route ::post('/login',
+[LoginController::class,'login']);
 
+Route::get('/register',
+[RegisterController::class,'index']);
 
 Route ::post('/register',
 [RegisterController::class,'create']);
