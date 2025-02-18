@@ -2,37 +2,32 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Models\User;
-use App\Models\Category;
+use App\Models\Categories;
 use App\Models\ProductList;
-
+use Illuminate\Http\Request;
+use App\Models\User;
 class ProductController extends Controller
 {
-    public function index()
-    {
-        $users = User::all();
-        $categories = Category::all();
-        $products = ProductList::with('category', 'user')->get();
-
-        return view('product', compact('categories', 'products', 'users'));
+    function index(){
+        $category = Categories::all();
+        $product = ProductList::all();
+        $Users = User::all();
+        return view('/product',['user'=>$Users,'categorys'=>$category,'products'=>$product]);
     }
 
-
-
-    public function insert(Request $req){
-        $category = new Category();
-        $category->name = $req->category_name;
-        $category->save();
-
+    function store(Request $req){
+        $stock = new Categories();
+        $stock ->name = $req->category;
+        $stock ->save();
         foreach($req->product_name as $value){
-            $product = new ProductList();
-            $product->name = $value;
-            $product->category_id = $category->id;
-            $product->user_id = session('user')->id;
-            $product->save();
+            $suppile = new ProductList();
+            $suppile->name = $value;
+            $suppile->category_id = $stock->id;
+            $suppile->user_id = session()->get('user')->id;
+            $suppile->save();
         }
-        return redirect('/products');
+        return redirect("/product");
     }
+
+
 }

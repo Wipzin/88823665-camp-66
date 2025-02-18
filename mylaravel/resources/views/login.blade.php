@@ -14,7 +14,7 @@
                     if($error){
                         ?>
                         <div class = "text-danger">
-                            {{server}}
+                            {{$error}}
                         </div>
                         <?php
                     }
