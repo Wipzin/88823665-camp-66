@@ -9,8 +9,7 @@ class HomeController extends Controller
     function __construct(){
         $user = session()->get('user');
         if(!isset($user)){
-            return redicted('/login');
-            die;
+            return redirect('/login');
         }
     }
     //
