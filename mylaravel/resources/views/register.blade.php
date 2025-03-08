@@ -101,7 +101,6 @@
         </script>
 
         <script>
-
             function clickme() {
                 let name = $('#name');
                 let email = $('#email');
